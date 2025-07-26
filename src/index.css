@@ -39,6 +39,8 @@ All colors MUST be HSL.
     --input: 0 0% 90%;
     --ring: 48 100% 50%;
 
+    --radius: 1rem;
+
     /* Custom brand colors */
     --brand-gold: 48 100% 50%;
     --brand-orange: 35 100% 55%;
@@ -50,27 +52,26 @@ All colors MUST be HSL.
     --gradient-primary: linear-gradient(135deg, hsl(var(--brand-gold)), hsl(var(--brand-orange)));
     --gradient-secondary: linear-gradient(135deg, hsl(var(--brand-green-light)), hsl(var(--brand-green)));
     --gradient-accent: linear-gradient(135deg, hsl(var(--brand-orange)), hsl(var(--brand-gold)));
+    --gradient-background: linear-gradient(135deg, hsl(0 0% 100%), hsl(var(--muted)) 50%, hsl(var(--brand-green-light) / 0.1));
+
+    /* Glassmorphism */
+    --glass-bg: rgba(255, 255, 255, 0.25);
+    --glass-border: rgba(255, 255, 255, 0.18);
+    --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
 
     /* Shadows */
     --shadow-premium: 0 20px 40px -12px hsl(var(--brand-gold) / 0.25);
     --shadow-soft: 0 4px 20px -4px hsl(0 0% 0% / 0.1);
-
-    --radius: 0.5rem;
+    --shadow-glow: 0 0 30px hsl(var(--brand-gold) / 0.3);
+    --shadow-deep: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -119,6 +120,74 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-gradient-to-br from-background via-muted/30 to-secondary/20 text-foreground;
+    background-attachment: fixed;
+  }
+}
+
+@layer components {
+  .glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid var(--glass-border);
+  }
+
+  .glass-strong {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .animate-fade-in-up {
+    animation: fade-in-up 0.6s ease-out forwards;
+  }
+
+  .animate-scale-in {
+    animation: scale-in 0.4s ease-out forwards;
+  }
+
+  .animate-slide-in-left {
+    animation: slide-in-left 0.5s ease-out forwards;
+  }
+
+  .stagger-delay-1 { animation-delay: 0.1s; }
+  .stagger-delay-2 { animation-delay: 0.2s; }
+  .stagger-delay-3 { animation-delay: 0.3s; }
+  .stagger-delay-4 { animation-delay: 0.4s; }
+  .stagger-delay-5 { animation-delay: 0.5s; }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
