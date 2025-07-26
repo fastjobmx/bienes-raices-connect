@@ -16,37 +16,36 @@ export const PropertyCard = ({ name, href, className }: PropertyCardProps) => {
     <Card
       onClick={handleClick}
       className={cn(
-        "p-6 cursor-pointer transition-all duration-500 hover:scale-105",
-        "bg-gradient-secondary border-2 border-brand-green/30",
+        "p-5 cursor-pointer transition-all duration-300 hover:scale-102",
+        "bg-white/90 border border-brand-primary/10",
         "hover:shadow-premium hover:shadow-glow",
-        "glass relative overflow-hidden group",
-        "before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/10 before:to-transparent",
-        "before:translate-x-[-100%] hover:before:translate-x-[100%] before:transition-transform before:duration-700",
+        "glass-strong relative overflow-hidden group shadow-soft",
+        "before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-brand-primary/5 before:to-transparent",
+        "before:translate-x-[-100%] hover:before:translate-x-[100%] before:transition-transform before:duration-500",
         "active:scale-95",
         className
       )}
     >
       {/* Background decoration */}
-      <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-brand-green/10 to-transparent rounded-full -translate-y-16 translate-x-16 group-hover:scale-125 transition-transform duration-500"></div>
+      <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-brand-primary/8 to-transparent rounded-full -translate-y-12 translate-x-12 group-hover:scale-110 transition-transform duration-300"></div>
       
       <div className="flex items-center justify-between relative z-10">
         <div>
-          <h3 className="text-lg font-bold text-foreground mb-1 group-hover:text-brand-green-dark transition-colors duration-300">
+          <h3 className="text-lg font-bold text-foreground mb-1 group-hover:text-brand-primary transition-colors duration-300">
             {name}
           </h3>
-          <p className="text-sm text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300">
+          <p className="text-sm text-muted-foreground group-hover:text-brand-accent/70 transition-colors duration-300">
             Ver detalles del lote
           </p>
         </div>
-        <div className="text-3xl group-hover:scale-110 group-hover:rotate-12 transition-all duration-300 filter group-hover:drop-shadow-lg">
+        <div className="text-2xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 filter group-hover:drop-shadow-md">
           🏡
         </div>
       </div>
       
       {/* Floating particles */}
-      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-        <div className="absolute top-3 left-6 w-1 h-1 bg-brand-green/60 rounded-full animate-ping"></div>
-        <div className="absolute bottom-4 right-8 w-0.5 h-0.5 bg-brand-green/40 rounded-full animate-ping animation-delay-300"></div>
+      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+        <div className="absolute top-3 left-6 w-1 h-1 bg-brand-primary/40 rounded-full animate-ping"></div>
       </div>
     </Card>
   );

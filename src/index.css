@@ -9,61 +9,61 @@ All colors MUST be HSL.
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 0 0% 8%;
+    --foreground: 220 13% 18%;
 
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 8%;
+    --card-foreground: 220 13% 18%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 8%;
+    --popover-foreground: 220 13% 18%;
 
-    /* Premium gold/yellow from logo */
-    --primary: 48 100% 50%;
-    --primary-foreground: 0 0% 8%;
+    /* Professional blue-green from reference site */
+    --primary: 200 95% 35%;
+    --primary-foreground: 0 0% 100%;
 
-    /* Green from logo */
-    --secondary: 85 60% 55%;
-    --secondary-foreground: 0 0% 8%;
+    /* Elegant green */
+    --secondary: 160 60% 45%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 0 0% 96%;
+    --muted: 220 13% 95%;
     --muted-foreground: 0 0% 45%;
 
-    /* Accent green */
-    --accent: 120 50% 45%;
+    /* Professional accent */
+    --accent: 200 95% 35%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 90%;
-    --input: 0 0% 90%;
-    --ring: 48 100% 50%;
+    --border: 220 13% 88%;
+    --input: 220 13% 88%;
+    --ring: 200 95% 35%;
 
     --radius: 1rem;
 
-    /* Custom brand colors */
-    --brand-gold: 48 100% 50%;
-    --brand-orange: 35 100% 55%;
-    --brand-green-light: 85 60% 65%;
-    --brand-green: 120 50% 45%;
-    --brand-green-dark: 140 50% 35%;
+    /* Professional brand colors */
+    --brand-primary: 200 95% 35%;
+    --brand-secondary: 160 60% 45%;
+    --brand-accent: 220 13% 18%;
+    --brand-light: 200 50% 85%;
+    --brand-dark: 200 95% 25%;
 
-    /* Premium gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--brand-gold)), hsl(var(--brand-orange)));
-    --gradient-secondary: linear-gradient(135deg, hsl(var(--brand-green-light)), hsl(var(--brand-green)));
-    --gradient-accent: linear-gradient(135deg, hsl(var(--brand-orange)), hsl(var(--brand-gold)));
-    --gradient-background: linear-gradient(135deg, hsl(0 0% 100%), hsl(var(--muted)) 50%, hsl(var(--brand-green-light) / 0.1));
+    /* Professional gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--brand-primary)), hsl(var(--brand-dark)));
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--brand-light)), hsl(var(--brand-secondary)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--brand-secondary)), hsl(var(--brand-primary)));
+    --gradient-background: linear-gradient(135deg, hsl(0 0% 100%), hsl(var(--muted)) 50%, hsl(var(--brand-light) / 0.15));
 
     /* Glassmorphism */
-    --glass-bg: rgba(255, 255, 255, 0.25);
-    --glass-border: rgba(255, 255, 255, 0.18);
-    --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    --glass-bg: rgba(255, 255, 255, 0.85);
+    --glass-border: rgba(255, 255, 255, 0.5);
+    --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
 
     /* Shadows */
-    --shadow-premium: 0 20px 40px -12px hsl(var(--brand-gold) / 0.25);
-    --shadow-soft: 0 4px 20px -4px hsl(0 0% 0% / 0.1);
-    --shadow-glow: 0 0 30px hsl(var(--brand-gold) / 0.3);
-    --shadow-deep: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    --shadow-premium: 0 20px 40px -12px hsl(var(--brand-primary) / 0.2);
+    --shadow-soft: 0 4px 20px -4px hsl(0 0% 0% / 0.08);
+    --shadow-glow: 0 0 30px hsl(var(--brand-primary) / 0.2);
+    --shadow-deep: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
